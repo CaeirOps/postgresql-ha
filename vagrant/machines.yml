@@ -1,0 +1,20 @@
+- name: pg-1
+  cpus: 1
+  memory: 1024
+  hostname: pg-1
+  ip: 192.168.99.31
+  sistema: centos/7
+
+- name: pg-2
+  cpus: 1
+  memory: 1024
+  hostname: pg-2
+  ip: 192.168.99.32
+  sistema: centos/7
+
+- name: pg-3
+  cpus: 1
+  memory: 1024
+  hostname: pg-3
+  ip: 192.168.99.33
+  sistema: centos/7
