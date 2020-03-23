@@ -8,21 +8,34 @@ Em ambientes críticos, a tolerância à falhas é essencial ainda mais quando f
 * GIT (<https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)>
 * Vagrant (<https://www.vagrantup.com/downloads.html)>
 * Virtual Box (<https://www.virtualbox.org/wiki/Downloads)>
-* RAM: 2GB (livre)
+* RAM: 3GB (livre)
 
 ---
 
 ## Provisionando o Lab
 
 Para realizar o provisionamento deste laborátio usaremos o Vagrant, que é uma ferramenta muito prática para o provisionamento de ambientes virtuais de testes e desenvolvimento, em nosso blog você pode aprender um pouco mais sobre ele e como instalar acessando [aqui](https://blog.4linux.com.br/virtualizacao-com-vagrant/).
-Os arquivos necessários passo o nosso laboratório estão disponíveis em um repositório do GitHub, então em sua máquina com o GIT instalado execute o comando:
+Os arquivos necessários para o nosso laboratório estão disponíveis em um repositório do GitHub, então em sua máquina com o GIT instalado execute o comando:
 
 ```bash
 git clone https://github.com/CaeirOps/postgresql-ha.git
 ````
 
-Acesse o diretório criado, pois iremos adotar este como workspace para executar o Vagrant. Se listarmos o conteúdo deste diretório veremos o Vagrantfile, arquivo do Vagrant utilizado para criar as VMs com as configurações necessárias de recurso e permissões para o nosso laboratório. Para criar as máquinas virtuais execute o comando:
+Dentro do repositório baixado terá um diretório com nome "vagrant", acesse ele pois iremos adotar este como workspace para executar o Vagrant. Se listarmos o conteúdo deste diretório veremos o Vagrantfile, arquivo utilizado pelo Vagrant para criar as VMs com as configurações necessárias de recurso, serviços e permissões para o nosso laboratório. Para criar as máquinas virtuais execute o comando:
 
 ```bash
 vagrant up
 ```
+
+Após este comando irá demorar alguns minutos até que as 3 máquinas de nosso laboratório estejam criadas, não se preocupe.
+Assim que o processor finalizado poderemos acessar as VMs com o comando "vagrant ssh", as nossas máquinas foram configuradas com os nomes "pg-1, 2 e 3" respectivamente. Neste momento iremos acessar a máquina 1, assim digite o comando:
+
+```bash
+vagrant ssh pg-1
+````
+
+Note que assim que acessar a máquina estará logado com o usuário "vagrant", execute o seguinte comando para logar como root:
+
+```bash
+sudo su
+````
