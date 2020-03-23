@@ -39,3 +39,10 @@ Note que assim que acessar a máquina estará logado com o usuário "vagrant", e
 ```bash
 sudo su
 ````
+Podemos verificar também que as VMs já possuem o PostgreSQL 12 instalado assim como seu repositório oficial que será utilizado para realizar o download do Pgpool2 e do Repmgr:
+
+```bash
+yum repo list | grep postgresql
+
+systemctl status postgresql12
+```
