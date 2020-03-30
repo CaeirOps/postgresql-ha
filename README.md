@@ -1,6 +1,6 @@
-# Alta disponibilidade com PostgreSQL
+# PostgreSQL em Alta Disponibilidade
 
-Em ambientes críticos, a tolerância à falhas é essencial ainda mais quando falamos de banco de dados. É muito importante que os seus dados estejam protegidos à falhas de harware, eletricidade, etc., para que seu negócio tenha um plano de continuidade. A replicação de dados e backup são ótimas práticas e são adotadas em quase todos os ambientes nos dias de hoje, neste post veremos um pouco além, veremos aqui como implementar um o cluster de PostgreSQL em alta disponibilidade (HA) utilizando a ferramenta Repmgr e utilizaremos também um balanceador de carga para distribuir as querys entre as intâncias com o PgPool2.
+Em ambientes críticos, a tolerância à falhas é essencial ainda mais quando falamos de banco de dados. É muito importante que os seus dados estejam protegidos à falhas de harware, eletricidade, etc., para que seu negócio tenha um plano de continuidade. A replicação de dados e backup são ótimas práticas e são adotadas em quase todos os ambientes nos dias de hoje, neste post veremos um pouco além, veremos aqui como implementar um o cluster de PostgreSQL em alta disponibilidade (HA) utilizando as ferramentas Repmgr e PGPool2.
 
 ## *Pré-requisitos:*
 
@@ -11,6 +11,14 @@ Em ambientes críticos, a tolerância à falhas é essencial ainda mais quando f
 * RAM: 3GB (livre)
 
 ---
+
+## Repmgr
+
+O Repmgr
+
+## PGPool2
+
+O PGBouncer
 
 ## Provisionando o Lab
 
@@ -46,3 +54,4 @@ yum repo list | grep postgresql
 
 systemctl status postgresql12
 ```
+
